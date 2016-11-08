@@ -15,6 +15,9 @@ sed -i s/__VERSION__/1.1.1/ CONTROL/config.json
 # Make sure config directory exists (even if empty), or configuration will be lost during upgrades
 if [ ! -d config ]; then mkdir config; fi
 
+# Make sure tmp directory exists
+if [ ! -d tmp ]; then mkdir tmp; fi
+
 # Retrieve compiled zip version
 # TODO : Download zip version
 unzip duplicati-*.zip
