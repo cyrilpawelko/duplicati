@@ -11,6 +11,7 @@ case $1 in
 	start)
 		# start script here
 		cd $APKG_PKG_DIR/
+		if [ ! -d tmp ]; then mkdir tmp; fi
 		$MONO_CMD Duplicati.Server.exe --webservice-port=8201 --webservice-interface=* --log-retention=30D --server-datafolder=$APKG_PKG_DIR/config --tempdir=$APKG_PKG_DIR/tmp > /dev/null &
 		echo $! > $PID_FILE
 		;;
