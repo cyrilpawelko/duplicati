@@ -18,7 +18,7 @@ if [ ! -d config ]; then mkdir config; fi
 # Make sure tmp directory exists
 if [ ! -d tmp ]; then mkdir tmp; fi
 
-# Retrieve compiled zip version
+# Retrieve compiled zip version from https://www.duplicati.com/download ("Zip file")
 # TODO : Download zip version
 unzip duplicati-*.zip
 rm duplicati-*.zip
